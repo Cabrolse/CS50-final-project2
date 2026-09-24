@@ -18,7 +18,7 @@ def main():
             break
         print("Inalid input. Only enter numbers please\n")
         
-    price = int(pr) + ""   
+    price = pr + "€"   
     categ = input("Category(e.x 'T-shirt'): ")
     category = categ.title()
     additional_details = input("Any additional details worth informing buyers:")
