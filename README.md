@@ -1,1 +1,4 @@
-# CS50-final-project2
+# Vinted Auto Formatter
+
+    #### Video Demo:  <URL HERE>
+    #### Description:
