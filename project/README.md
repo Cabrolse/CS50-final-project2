@@ -10,7 +10,7 @@
     I for one upload frequently enough on Vinted (12 uploads a month) and a lot of time can pass when trying
     to upload each item.
 
-    TALK ABOUT ORIGINAL IDEA HERE WHY NEW IDEA BETTER!
+    My first idea was to make a program much similar to this but bigger. I wanted once the user has inputted all the necessary details for the listing including images for a bot (I was using selenium for it) to open the vinted website and input all the details of the listing for the user and then save the item as a draft. However my program kept getting more and more complicated just to make little progress.
 
     The program prompts the user for details of the listing. its size, its brand name the condition, price they'd like to sell it at, what category it fits into (e.x jumper) and any additional details to make the user aware about. for this program I am assuming the user has provided the measurements of the clothing in the photos so it does not have to be typed in manually.
     it makes sure that the price is a number and re-prompts the user for input if they left an input blank. size is capitalized using the capitalize() attribute and other details such as the brand and the style got the first letter of each word capitalized using the title() attribute.
