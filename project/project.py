@@ -3,25 +3,25 @@ import csv
 
 def main():
     #declare all my fvariables
-    si = empty_input("Size: ")
-    size = si.capitalize()
+    size = empty_input("Size: ").capitalize()
     style = empty_input("Style (e.x 'Y2K'): ")
-    bran = empty_input("Brand: ")
-    brand = bran.title()
-    cond = empty_input("Condition: ")
-    condition = cond.title()
+    brand = empty_input("Brand: ").title()
+    #brand = bran.title()
+    condition = empty_input("Condition: ").title()
     
     #checks that price is a digit 
     while True:
         pr = input("Price: ")
-        if pr.isdigit():
+        try:
+            float(pr)
             break
-        print("Inalid input. Only enter numbers please\n")
+        except ValueError:
+            print("Invalid input. Only enter numbers please\n")
         
-    price = pr + "€"   
-    categ = input("Category(e.x 'T-shirt'): ")
-    category = categ.title()
-    additional_details = input("Any additional details worth informing buyers:")
+        
+    price = f"{pr}€"  
+    category = empty_input("Category(e.x 'T-shirt'): ").title()
+    additional_details = ("(optional) Any additional details worth informing buyers:")
     
     #call functions
     title = format_title(size, brand, condition, category, style)
@@ -65,7 +65,7 @@ def hashtag(size: str, category: str, brand: str, style: str):
     hstyle = style.replace(" ", "")
     hcategory = category.replace(" ", "")
     #returns all the hashtags
-    return f"#{hstyle} #Skerries #Ireland #Dublin #dublinvinted #preloved #vintagestyle #{brand} #{hcategory} #{size}"
+    return f"#{hstyle} #Skerries #Ireland #Dublin #dublinvinted #preloved #vintagestyle #{brand} #{hcategory} #{size} #Dublin{style}"
   
 #saves the listing to a csv file with its own name  
 def save_listing(title: str, description: str, price: int):
