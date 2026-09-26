@@ -1,5 +1,6 @@
 #used for creating and appending a csv file the vinted listing
 import csv
+import os
 
 def main():
     #declare all my fvariables
@@ -71,8 +72,12 @@ def hashtag(size: str, category: str, brand: str, style: str):
 def save_listing(title: str, description: str, price: int):
     file_name = title.replace(" ", "_") + ".csv"
     
+    #adds file to folder
+    file_path = os.path.join("listings", file_name)
+    
     #create csv file and load data into file
-    with open(file_name, mode='a', newline='', encoding='utf-8') as file:
+    with open(file_path, mode='a', newline='', encoding='utf-8') as file:
+        
         #opens file in writer mode
         writer = csv.writer(file)
         #writes the following variables into the csv file
