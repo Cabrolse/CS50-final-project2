@@ -8,7 +8,7 @@ def main():
     size = si.capitalize()
     style = empty_input("Style (e.x 'Y2K'): ")
     bran = empty_input("Brand: ")
-    brand = bran.title()
+    brand = brand.title()
     cond = empty_input("Condition: ")
     condition = cond.title()
     
