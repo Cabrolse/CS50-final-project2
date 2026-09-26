@@ -19,7 +19,7 @@
     and a function to generate the description which is cleenly formatted.
     each function is saved into a variable where they are called to the save_listing function which creates a brand new csv with a
     unique name for that specific item using with open() as file and
-    the text is entered in order of the title of the listing, than the price and then the description using writerrow which is a built in csv module.
+    the text is entered in order of the title of the listing, than the price and then the description using writerrow which is a built in csv module.cla
 
     then in a seperate file I tested that the title, description and hastags were working using assert.
     I made sure in the description that key parts of the listing were included rather than checking that it was one to one of what I wanted considering how big the description is.
